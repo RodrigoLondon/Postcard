@@ -1,13 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pe3-Dw-C0R">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Barcelona-->
+        <scene sceneID="WHa-qY-JWp">
+            <objects>
+                <viewController id="j3v-JR-K4f" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PLZ-AD-bM1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qqa-RL-ujt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kPe-nV-O3e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SagradaFamilia.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="79m-g7-QsN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Barcelona" id="hxT-Zp-tF5">
+                        <barButtonItem key="rightBarButtonItem" title="View Message" id="UGY-0z-TLz">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="L4I-qn-NbO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSI-JI-l8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364" y="337"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Post_Card" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +46,101 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="AlbertEinsteinStamp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0cl-rE-5Gc">
+                                <rect key="frame" x="450" y="161" width="80" height="80"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ohd-gF-ubm">
+                                <rect key="frame" x="20" y="262" width="510" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oox-OV-y8s">
+                                <rect key="frame" x="20" y="310" width="510" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NT-Mc-yyu">
+                                <rect key="frame" x="20" y="192" width="379" height="30"/>
+                                <color key="backgroundColor" red="0.72080778320798566" green="0.76457618990800369" blue="0.79262132536281238" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <state key="normal" title="Send Mail"/>
+                                <connections>
+                                    <action selector="sendMailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ImA-mY-SFE"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSC-Cs-vjM">
+                                <rect key="frame" x="20" y="72" width="510" height="73"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLi-fb-yzj">
+                                <rect key="frame" x="20" y="153" width="379" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AG8-tT-g42">
+                                <rect key="frame" x="20" y="153" width="379" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="379" id="V3g-va-g1B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AG8-tT-g42" firstAttribute="top" secondItem="FSC-Cs-vjM" secondAttribute="bottom" constant="8" symbolic="YES" id="7ez-Fe-cuz"/>
+                            <constraint firstItem="AG8-tT-g42" firstAttribute="leading" secondItem="hLi-fb-yzj" secondAttribute="leading" id="CSb-VL-jLe"/>
+                            <constraint firstItem="AG8-tT-g42" firstAttribute="leading" secondItem="Ohd-gF-ubm" secondAttribute="leading" id="Eo2-ZA-FDQ"/>
+                            <constraint firstItem="9NT-Mc-yyu" firstAttribute="top" secondItem="AG8-tT-g42" secondAttribute="bottom" constant="18" id="IpE-GA-LWf"/>
+                            <constraint firstItem="AG8-tT-g42" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RH5-3c-d3y"/>
+                            <constraint firstItem="AG8-tT-g42" firstAttribute="leading" secondItem="FSC-Cs-vjM" secondAttribute="leading" id="V33-0t-Uz0"/>
+                            <constraint firstItem="AG8-tT-g42" firstAttribute="trailing" secondItem="9NT-Mc-yyu" secondAttribute="trailing" id="Yao-Lt-CXT"/>
+                            <constraint firstItem="AG8-tT-g42" firstAttribute="leading" secondItem="9NT-Mc-yyu" secondAttribute="leading" id="cF7-L6-x9n"/>
+                            <constraint firstItem="AG8-tT-g42" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="153" id="fht-Lg-38L"/>
+                            <constraint firstItem="AG8-tT-g42" firstAttribute="leading" secondItem="oox-OV-y8s" secondAttribute="leading" id="h1F-q7-DeK"/>
+                            <constraint firstItem="AG8-tT-g42" firstAttribute="baseline" secondItem="hLi-fb-yzj" secondAttribute="baseline" id="hi0-DD-zyg"/>
+                            <constraint firstItem="0cl-rE-5Gc" firstAttribute="leading" secondItem="AG8-tT-g42" secondAttribute="trailing" constant="51" id="iii-Pk-Zm8"/>
+                            <constraint firstItem="AG8-tT-g42" firstAttribute="trailing" secondItem="hLi-fb-yzj" secondAttribute="trailing" id="wc5-mQ-lbE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="enterMessageTextField" destination="oox-OV-y8s" id="tP2-Qm-cYV"/>
+                        <outlet property="enterNameTextField" destination="Ohd-gF-ubm" id="AvD-TX-VtY"/>
+                        <outlet property="mailButton" destination="9NT-Mc-yyu" id="DyQ-9d-8Qj"/>
+                        <outlet property="messageLabel" destination="FSC-Cs-vjM" id="Fgt-GD-OM1"/>
+                        <outlet property="nameLabel" destination="AG8-tT-g42" id="EUn-Ul-P8L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1057" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dBF-h7-Pve">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pe3-Dw-C0R" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TtR-cs-0An">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="j3v-JR-K4f" kind="relationship" relationship="rootViewController" id="c8C-QY-VLS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PAu-6C-o2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-448" y="337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AlbertEinsteinStamp.jpg" width="1917" height="1344"/>
+        <image name="SagradaFamilia.jpeg" width="205" height="245"/>
+    </resources>
 </document>
